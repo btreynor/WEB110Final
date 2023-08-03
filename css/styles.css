@@ -1,0 +1,531 @@
+/* Style rules for the sign-up page */
+body {
+  background-color: #087e8b;
+  background-image: linear-gradient(to bottom, #ffffff, #087e8b);
+  background-repeat: no-repeat;
+  color: #012327;
+  font-family: 'Roboto', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header { 
+  height: 200px; 
+  margin-bottom: 0;
+  background-image: url('images/squaredcirclebanner.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+h1 { 
+  text-indent: 100%; 
+  white-space: nowrap; 
+  overflow: hidden; 
+}
+
+main { 
+  display: block;
+  background-color: #ff5a5f;
+  color: #000000;
+  padding: 10px 20px;
+  overflow: auto;
+  text-align: center;
+}
+
+#wrapper { 
+  margin: 0 auto;
+  width: 960px;
+  background-color: #087e8b;
+  color: #000066; 
+}	 
+
+dt, dl {
+  text-align: left;
+}
+
+/* social media link */
+/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 50px;
+  width: 30px;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  color: white;
+  background: #3b5998;
+}
+
+/* index.html picture animation */
+li {
+  color: #02fdcb;
+  text-shadow: 3px 3px 5px #000000;
+}
+
+.gallery { 
+  position: relative; 
+}
+
+.gallery ul { 
+  width: 300px; 
+  list-style-type: none;
+}
+
+.gallery li { 
+  display: inline; 
+  float: left;
+	padding: 10px;
+}
+
+.gallery img { 
+  border-style: none;
+}
+
+.gallery a { 
+  color: #eaeaea;
+  text-decoration: none; 
+	font-style: italic;
+}
+
+.gallery span { 
+  position: absolute; 
+  left: -1000px;
+	opacity: 0;
+  transition: opacity 3s ease-in-out; 
+}
+
+.gallery a:hover span { 
+  position: absolute;
+  top: 16px; 
+	left: 320px;
+  text-align: center; 
+	opacity: 1;
+}
+						
+.figure { 
+  position: absolute;
+  left: 280px;
+	text-align: center;
+	opacity: .05;
+}
+
+/* another picture and caption for index.html */
+figcaption { 
+  text-align: center; 
+  font-family: papyrus, fantasy; 
+  color: #fff;
+}
+
+figure { 
+  float: right;
+	margin: 10px;
+  padding: 5px;
+	background-color: #000;
+	border: 1px solid #000;
+	box-shadow: 5px 5px 5px #828282;
+	transform: rotate(3deg);
+}
+
+/* trying some different text animations */
+/* this is for the first DT */
+.newText {
+  background-image: linear-gradient(
+    -225deg,
+    #17c4bb 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #f3900d 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 50px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* for the confirmation page h3 text */
+.title-word {
+  animation: color-animation 4s linear infinite;
+}
+
+.title-word-1 {
+  --color-1: #DF8453;
+  --color-2: #3D8DAE;
+  --color-3: #E4A9A8;
+}
+
+.title-word-2 {
+  --color-1: #faad07;
+  --color-2: #ACCFCB;
+  --color-3: #17494D;
+}
+
+.title-word-3 {
+  --color-1: #ACCFCB;
+  --color-2: #E4A9A8;
+  --color-3: #ACCFCB;
+}
+
+.title-word-4 {
+  --color-1: #3D8DAE;
+  --color-2: #DF8453;
+  --color-3: #E4A9A8;
+}
+
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-2)}
+  66%   {color: var(--color-3)}
+  99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
+}
+
+/* style rules for the wavy donation on signup page */
+.wavy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 25px;
+}
+.wavy span {
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  animation: wavy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+  
+}
+@keyframes wavy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+
+/* style rules for the dd on signup page */
+.shadow {
+  font-weight: bold; 
+  text-shadow: 3px 3px 5px #ffffff;  
+  text-align: left; 
+  font-size: 1.2em;
+	color: #087e8b;
+  font-family: 'Fira Sans', sans-serif; 
+	line-height: 50px;	
+}
+
+/* style rules for wavy2 font etc */
+.wavy2 {
+  font-weight: bold; 
+  text-shadow: 3px 3px 5px #000;  
+  text-align: left; 
+  font-size: 1.2em;
+	color: #7FFFD4;
+  font-family: 'Fira Sans', sans-serif; 
+	line-height: 50px;	
+}
+
+/* style rules for the warrior dt */
+.wavy2 span {
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+  color: rgb(248, 232, 6);
+  text-transform: uppercase;
+  animation: flip 2s infinite;
+  animation-delay: calc(.2s * var(--i))
+}
+
+@keyframes flip {
+  0%,80% {
+    transform: rotateY(360deg) 
+  }
+}
+
+/* style rules for the footer */
+footer { 
+  font-size: .75em;
+  font-style: italic;
+  text-align: center;
+  padding: 10px;
+  background-color: #1dc8c0;
+  clear: both;
+}
+
+/* Just to make the paragraph confirmation bullets look good */
+#win { 
+  font-weight: bold; 
+  text-shadow: 3px 3px 5px #000000; 
+  font-style: italic; 
+  font-family: 'roboto', sans-serif; 
+  font-size: 1.5em; 
+  color: #ffd700; 
+}
+
+/* style rules for h2 */
+h2 {  
+  text-shadow: 3px 3px 5px #000000;
+  color: #bfd7ea;
+  font-size: 1.5em;	
+  text-align: center; 
+  background-color: #c81d25; 
+  border-bottom: 2px solid #000000; 
+}
+
+/* style rules for signup button */
+.signup {
+  border-radius: 16px;
+  position: relative;
+  background-color: #04AA6D;
+  border: none;
+  font-size: 18px;
+  color: #FFFFFF;
+  padding: 20px;
+  width: 100px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.signup:after {
+  content: "";
+  background: #90EE90;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.signup:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+/* Full-width input fields */
+input[type=text], input[type=tel] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=tel]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .submitbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #474e5d;
+  padding-top: 50px;
+  text-align: left;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+
+/* Style rules for the calendar */
+ul {
+  list-style-type: none;
+}
+
+.list {
+  text-shadow: none;
+}
+
+.month {
+  width: 100%;
+  background: #12c9a4;
+  text-align: center;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+}
+
+.days li .active {
+  padding: 5px;
+  background: #1abc9c;
+  color: white !important
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+  .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+  .weekdays li, .days li {width: 12.5%;}
+  .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+  .weekdays li, .days li {width: 12.2%;}
+}
